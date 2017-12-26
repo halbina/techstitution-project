@@ -1,0 +1,62 @@
+
+header {
+  padding: 20px 0;
+  background-color: #515A5A;
+  color: white;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+
+/*.jumbotron {
+  display: flex;
+  align-items: left;
+  background-image: url ('images/harta.png');
+  background-size: cover;
+  color: #ffffff;
+  height: 500px;
+  text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+*/
+
+/*C:\Users\Laptopi\Desktop\Dev\Techstitution-AH\images*/
+
+ footer  {
+	background-color: #515A5A;       /*#5B88B5;*/
+	color: white;
+	margin-bottom: 2rem;
+	padding: 20px 0;
+	margin: 0 auto;
+
+}
+
+.container {
+	background-color: #515AAA;
+}
+
+
+ .main-content{
+       
+        align-content: center;
+        float: center;
+        background: #dbdfe5;
+        /*text-align: center;*/
+  }
+
+  h4 {
+  	font-family: Georgia;
+  }
+ 
+ 
+
+.border-class
+{
+  border-width: 5px;
+  margin: 0px;
+  padding:25px;
+  border-color: yellow;
+  border-style: initial;
+  
+
+
+}
