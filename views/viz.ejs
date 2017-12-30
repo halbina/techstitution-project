@@ -1,0 +1,153 @@
+<% include partials/header %>
+<% include partials/nav %>
+
+<div>
+	<h1>Vizualizimet Forma 2</h1>
+</div>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+	
+	//function getData(responseObj) {
+ 
+  	for(var i=0; i<docs.length; i++) {
+
+       var pikaKufitare = docs[i].pika_kufitare;
+
+       var hyrjeMinMuta = docs[i].hyrje_min_minuta;
+       var hyrjeMaxMinuta = docs[i].hyrje_max_minuta; 
+       var hyrjeMinMetra = docs[i].hyrje_min_metra; 
+       var hyrjeMaxMetra = docs[i].hyrje_max_metra; 
+       var daljeMinMinuta = docs[i].dalje_min_minuta; 
+       var daljeMaxMinuta = docs[i].dalje_max_minuta; 
+       var daljeMinMetra = docs[i].dalje_min_metra;
+       var daljeMaxMetra = docs[i].dalje_max_metra; 
+
+   
+    }
+
+    /*var dataset = [
+      {
+        "seriesname" : "Hyrje Min Minuta",
+        "data" : hyrjeMinMuta
+      },
+      {
+        "seriesname" : "Hyrje Max Minuta",
+        "data" : hyrjeMaxMinuta
+      },
+      {
+        "seriesname" : "Hyrje Min Metra",
+        "data" : hyrjeMinMetra
+      },
+      {
+        "seriesname" : "Hyrje Max Metra",
+        "data" : hyrjeMaxMetra
+      },
+      {
+        "seriesname" : "Dalje Min Minuta",
+        "data" : daljeMinMinuta
+      },
+      {
+        "seriesname" : "Dalje Max Minuta",
+        "data" : daljeMaxMinuta
+      },
+      {
+        "seriesname" : "Dalje Min Metra",
+        "data" : daljeMinMetra
+      },
+      {
+        "seriesname" : "Dalje Max Metra",
+        "data": daljeMaxMetra
+      }
+    ];
+
+    var response = {
+      "dataset" : dataset,
+      "categories" : pikaKufitare
+    };
+
+    //responseObj.json(response);
+  
+//}*/
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Vonesat n\353 Hyrje'
+    },
+    subtitle: {
+        text: 'Vonesat e paraqitura n\353 koh\353'
+    },
+    xAxis: {
+        categories: pikaKufitare ,
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Minutat'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} min</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+    	
+
+        name: "Hyrje Min Minuta",
+        data: hyrjeMinMuta
+      },
+      {
+        name: "Hyrje Max Minuta",
+        data: hyrjeMaxMinuta
+      },
+      {
+        name: "Hyrje Min Metra",
+        data: hyrjeMinMetra
+      },
+      {
+        name: "Hyrje Max Metra",
+        data: hyrjeMaxMetra
+      },
+      {
+        name: "Dalje Min Minuta",
+        data: daljeMinMinuta
+      },
+      {
+        name: "Dalje Max Minuta",
+        data: daljeMaxMinuta
+      },
+      {
+        name: "Dalje Min Metra",
+        data: daljeMinMetra
+      },
+      {
+        name: "Dalje Max Metra",
+        data: daljeMaxMetra
+      
+
+    }]
+
+
+});
+
+
+
+</script>
+
+<% include partials/footer %>

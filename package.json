@@ -7,6 +7,7 @@
     "body-parser": "^1.18.2",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
+    "highcharts": "^6.0.4",
     "mongodb": "^2.2.33",
     "nodemon": "^1.14.3"
   },
@@ -18,12 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HAlbina/Techstitution-AH.git"
+    "url": "git+https://github.com/halbina/techstitution-project.git"
   },
   "author": "Albina Hoti",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HAlbina/Techstitution-AH/issues"
+    "url": "https://github.com/halbina/techstitution-project/issues"
   },
-  "homepage": "https://github.com/HAlbina/Techstitution-AH#readme"
+  "homepage": "https://github.com/halbina/techstitution-project#readme"
 }

@@ -21,9 +21,10 @@
                      <form class="form-horizontal border-class" method ="POST" action="/update/<%= doc._id %>">
                         <div class="row">
                             <div class="form-group">
-                                <label class="col-sm-3 col-sm-offset-1 control-label">Zgjedh pik&euml;n kufitare</label>
+                                <label class="col-sm-3 col-sm-offset-1 control-label">Pika kufitare</label>
                                     <div class="col-sm-4 selectContainer">
                                         <select name="pika_kufitare" class="form-control" id="pika_kufitare" value="<%= doc.pika_kufitare %>">
+                                            <option selected disabled>Zgjedh pik&euml;n kufitare</option>
                                             <option value="vemice">V&euml;rmic&euml;</option>
                                             <option value="qafprushi">Qaf&euml; e Prushit</option>
                                             <option value="qafmorine">Qaf&euml; e Morin&euml;s</option>

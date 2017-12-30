@@ -3,7 +3,6 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
 
-
 //Initialize app
 var app = express();
 
@@ -36,6 +35,7 @@ MongoClient.connect(mongoURL, function(err , database ){
 });
 
 
+//describe all datas 
 app.get('/', function(req,res){
    //res.sendFile(__dirname + '/index.html');
    var title="Forma e regjistrimit t\353 pikave kufitare";
@@ -44,7 +44,7 @@ app.get('/', function(req,res){
        
    });
  //list all data 
-app.get('/show',function(req,res){
+app.get('/show',function(req, res){
 		var title="Lista me t\353 dh\353na";
 		qkmk.find({}).toArray(function(err,docs){
 			if(err){
@@ -64,22 +64,9 @@ app.post('/add',function(req,res){
 		res.redirect('/show');	
 		});
      }); 
-/*app.get('/edit/:id',function(req,res){ 
-	var title = "Edito te dhenat";
-  var id = req.params.id;
-   qkmk.findOne({_id: ObjectId(id) },  function(err, result) {
-   	if(err) {
-   		console.log(err);
-   	}
-   	res.render('edit', {title: title, doc: result });
-   });
-   
-   
-   //res.render('edit');
-     }); 
-*/
-	 
 
+	 
+//edit datas
 app.get('/edit/:id', function(req, res) {
 	var title = "Edito t\353 dh\353nat";
   var id = objectId(req.params.id);
@@ -105,21 +92,49 @@ app.post('/update/:id',function(req,res){
      }); 
 });
 
-app.get('/delete/:id',function(req,res){ 
+//Delete datas
+app.get('/delete/:id',function(req, res){ 
 
 	var data = req.body;
 	var id = objectId(req.params.id);
 	qkmk.deleteOne( { _id: id},
-	
+		
 		function(err, result) {
 			if(err) {
 				console.log(err);
 			}
    res.redirect('/show');
-     }); 
+     }); 	
 });
-   	 
+
+//Charts
+app.get('/charts', function(req, res) {
+  //getData(res);
+  var title = "Vizualizimet"
+  qkmk.find({}).toArray(function(err,docs){
+      if(err){
+        console.log(err);
+      }
       
+   res.render('charts' , {title: title , docs :docs});
+     });
+  
+});
+
+//viz
+ app.get('/viz', function(req, res) {
+
+ 	qkmk.find({}).toArray(function(err,docs){
+      if(err){
+        console.log(err);
+      }
+      
+   res.render('viz' , {docs :docs});
+     });
+ });
+   	 
+ //Viz
+     
    
 /*app.get('/exercise',function(req,res){
 	var dataJson ={
