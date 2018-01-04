@@ -1,13 +1,16 @@
 <% include partials/header %>
 <% include partials/nav %>
 
-<div class="container">
-<div class="col-sm-12 text-center">
-<h2> <%=title %></h2>
-</div>
 
-<table class="table table-bordered text-center" style="background-color: white; color: black;">
-       <thead>
+<div class="container">
+<div class="jumbotron">
+<!--<div class="main-content">-->
+<div class="col-sm-12 text-center">
+  <h2 class="second"> <%=title %></h2>
+</div><br />
+
+    <table class="table table-bordered table-inverse table-hover  text-center">
+       <thead class="bg-primary">
          <tr>
            <th> Pika kufitare </th>
            <th> Hyrje min minuta</th>
@@ -22,42 +25,39 @@
           
          </tr>
        </thead>
-       <tbody>
-
-
-   <tr>
-       <% for(var i=0; i<docs.length; i++){%>
-       <td><%= docs[i].pika_kufitare %></td>
-       <td><%= docs[i].hyrje_min_minuta %></td>
-       <td><%= docs[i].hyrje_max_minuta %></td>
-       <td><%= docs[i].hyrje_min_metra %></td>
-       <td><%= docs[i].hyrje_max_metra %></td>
-       <td><%= docs[i].dalje_min_minuta %></td>
-       <td><%= docs[i].dalje_max_minuta %></td>
-       <td><%= docs[i].dalje_min_metra %></td>
-       <td><%= docs[i].dalje_max_metra %></td>
-       <td> <a href="/edit/<%= docs[i]._id %>"><i class="fa fa-pencil" aria-hidden="true"> Ndrysho</i></a>
-       </td>
-       <td> <!--<button onclick="myFunction()">-->
-        <a href="/delete/<%= docs[i]._id %>"><i class="fa fa-trash"> Fshij</i></a>
-      </td>
-
-
       
-     
-</tr>
+      <tbody>
+         <tr>
+            <% for(var i=0; i<docs.length; i++){%>
+              <td class="bg-info"><%= docs[i].pika_kufitare %></td>
+              <td><%= docs[i].hyrje_min_minuta %></td>
+              <td><%= docs[i].hyrje_max_minuta %></td>
+              <td><%= docs[i].hyrje_min_metra %></td>
+              <td><%= docs[i].hyrje_max_metra %></td>
+              <td><%= docs[i].dalje_min_minuta %></td>
+              <td><%= docs[i].dalje_max_minuta %></td>
+              <td><%= docs[i].dalje_min_metra %></td>
+              <td><%= docs[i].dalje_max_metra %></td>
+              <td class="bg-warning"> <a href="/edit/<%= docs[i]._id %>"><i class="fa fa-pencil" aria-hidden="true"> Ndrysho</i></a>
+              </td>
+              <td class="bg-danger"> <!--<button onclick="myFunction()">-->
+              <a href="/delete/<%= docs[i]._id %>"><i class="fa fa-trash"> Fshij</i></a>
+              </td>
+        </tr>
   
-<% } %>
+          <% } %>
 
     
-       </tbody>
+    </tbody>
 
-    </table>
+  </table>
 
 
-     <!--<div id = "container" style = "width: 550px; height: 400px; margin: 0 auto"></div>-->
-      </div>
-      <% include partials/footer %>
+     
+    </div>
+  </div>
+  
+  <% include partials/footer %>
 
 
 

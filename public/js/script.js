@@ -1,129 +1,304 @@
-//console.log("Hello World from Script.js");
-//var age = prompt('Your age: ');
-//var days = age * 365;
-//var alive = alert(age  + " years is  " +  days + " days");
 
-/*var age = prompt("Age: ");
-
-if (age < 18) {
-alert("Sorry you are not old enough to enter here");
-}
-
-else if (age < 21) {
-alert("You are enter but cannot drink");
-}
-else {
-	alert("Come on in. You can drink");
-}
-*/
-
-/*var age = prompt("Age: ");
-var n = parseInt(age);
-
-if (n < 0){
-	alert("Negative age");
-}
-else if (n === 21){
-	alert("happy 21s birthday");
-}
-else (!(n % 2))  
-	alert("youre age is odd");
-*/
-/*var count = -10;
-
-while (count < 19) {
-	
-	console.log("count is: " + count);
-	count ++;
-
-
-}
-*/
-/*var count = 10;
-
-while (count <= 40) {
-	if (count % 2 == 0){
-	
-	console.log("count is: " + count);
-}
-	count ++;
-}
-*/
-//for (var i=10; i <= 40; i=i+2){
-//	console.log(i);
-//}
-
-/*function doSomething(){
-	console.log("Hiiii");
-}
-doSomething();
-
-function test(x){
-
-	//return x * 2;
-
-	console.log(x*2);
-	//return x / 2;
-	console.log(x/2);
-}
-
-test(40);
-*/
-function isEven(x){
-	
-	if (x % 2 == 0){
-		 return "qift";
-	}
-	else {
-		return "tek";
-	}
-
-	
-}
-
-console.log(isEven(21));
-
-//JSON example
-var friends = ["bob", "sam", 1, 2];
-  friends[1];
-  friends.length;
-
- var person = {
- 	name: "Bob",
- 	age: 24,
- 	city: "LA"
- };
-
- console.log(person["name"]);
- console.log(person.name);
- console.log(person.city);
-
- /*$(document).ready(function() {
-
- $('.highlight', '#third').click(function() {
- 	alert("Triger is clicked");
-
- 	$('h1').css('background-color', 'red');
- 	//$(this).hide();
- });
- */
-/*$(document).ready(function() {
- $('div').css("background-color", "gray");
-
-  $('.highlight').addClass('highlight-width'); // menyra me e mire e qasjes 
-// $('.highlight').width(200);
-
-  $('#third').addClass('third-border');
-
-
- });
- */
 
 $(document).ready(function() {
     $("button").addClass("animated bounce");
     $("#buttons").addClass("animated shake");
  });
 
+$(document).ready(function() {
+    //$(".target").mouseenter(function(){
+      //  $(this).resize();
+      $(".target").addClass("animated shake");
+    });
+
+
+
+$(document).ready(function() {
+
+Highcharts.chart('container', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Vonesat n\353 Hyrje'
+    },
+    subtitle: {
+        text: 'Vonesat e paraqitura n\353 minuta'
+    },
+    xAxis: {
+        categories: ['MinMinuta', 'MaxMinuta'],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Minutat'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} min</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'V\353rmic\353',
+        data: [10, 18]
+
+    }, {
+        name: 'Qaf\353 e Prushit',
+        data: [2, 3]
+
+    }, {
+        name: 'Qaf\353 e Morin\353s',
+        data: [3, 4]
+
+    }, {
+        name: 'Kull\353',
+        data: [3, 5]
+
+    },{
+        name: 'Merdar\353',
+        data: [2, 3]
+
+    }, {
+        name: 'Hani i Elezit',
+        data: [10, 13]
+
+    }, {
+    	name: 'Glloboqic\353',
+        data: [3, 6]
+
+    }]
+});
+    
+     
+});
+
+
+
+
+$(document).ready(function() {
+
+Highcharts.chart('container1', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Vonesat n\353 Dalje'
+    },
+    subtitle: {
+        text: 'Vonesat e paraqitura n\353 minuta'
+    },
+    xAxis: {
+        categories: ['MinMinuta', 'MaxMinuta'],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Minutat'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} min</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'V\353rmic\353',
+        data: [3, 5]
+
+    }, {
+        name: 'Qaf\353 e Prushit',
+        data: [4, 5]
+
+    }, {
+        name: 'Qaf\353 e Morin\353s',
+        data: [5, 6]
+
+    }, {
+        name: 'Kull\353',
+        data: [1, 3]
+
+    },{
+        name: 'Merdar\353',
+        data: [1, 2]
+
+    }, {
+        name: 'Hani i Elezit',
+        data: [4, 5]
+
+    }, {
+        name: 'Glloboqic\353',
+        data: [2, 3]
+
+    }]
+});
+    
+    
+});
+
+
+
+
+$(document).ready(function() {
+
+Highcharts.chart('container2', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Vonesat n\353 Hyrje'
+    },
+    subtitle: {
+        text: 'Vonesat e paraqitura n\353 metra'
+    },
+    xAxis: {
+        categories: ['MinMetra', 'MaxMetra'],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Metrat'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} metra</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'V\353rmic\353',
+        data: [3, 7]
+
+    }, {
+        name: 'Qaf\353 e Prushit',
+        data: [5, 6]
+
+    }, {
+        name: 'Qaf\353 e Morin\353s',
+        data: [1, 2]
+
+    }, {
+        name: 'Kull\353',
+        data: [3, 5]
+
+    },{
+        name: 'Merdar\353',
+        data: [2, 3]
+
+    }, {
+        name: 'Hani i Elezit',
+        data: [4, 6]
+
+    }, {
+        name: 'Glloboqic\353',
+        data: [4, 5]
+
+    }]
+});
+       
+});
+
+
+
+
+$(document).ready(function() {
+
+Highcharts.chart('container3', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Vonesat n\353 Dalje'
+    },
+    subtitle: {
+        text: 'Vonesat e paraqitura n\353 metra'
+    },
+    xAxis: {
+        categories: ['MinMetra', 'MaxMetra'],
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Metrat'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} metra</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'V\353rmic\353',
+        data: [2, 4]
+
+    }, {
+        name: 'Qaf\353 e Prushit',
+        data: [2, 3]
+
+    }, {
+        name: 'Qaf\353 e Morin\353s',
+        data: [2, 3]
+
+    }, {
+        name: 'Kull\353',
+        data: [2, 4]
+
+    },{
+        name: 'Merdar\353',
+        data: [5, 8]
+
+    }, {
+        name: 'Hani i Elezit',
+        data: [7, 8]
+
+    }, {
+        name: 'Glloboqic\353',
+        data: [2, 3]
+
+    }]
+});
+       
+});
 
     
 

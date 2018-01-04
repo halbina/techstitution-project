@@ -1,42 +1,19 @@
-<!--include header -->
+
 <% include  partials/header %>
 <% include partials/nav %>
-<!--<title><%= title %></title>-->
 
- <!--<header class="container">
-    <div class="row">
-    <nav class="navbar navbar-default">
-    <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">QKMK</a>
-    </div>
-    <ul class="nav navbar-nav">
-      
-      <li><a href="/">Forma</a></li>
-      <li><a href="/show">Lista</a></li>
-      <li><a href="/">Vizualizimet</a></li>
-    </ul>
-  </div>
-</nav>
-</div>-->
-        <div class="row">
+<div class="container">
         <!--<img class="col-sm-2 text-left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Coat_of_arms_of_Kosovo.svg/200px-Coat_of_arms_of_Kosovo.svg.png">-->
-        <h1 class=" col-sm-offset-2 col-sm-8 text-center"><%= title %></h1>
-
-        
-        
-    </div>
+    <h1 class="primary col-sm-offset-2 col-sm-8 text-center"><%= title %></h1></br >
+</div>
     
 
 
-
-    </header>
-
-<div class="container">
-        <div class="row">
-            <div class="main-content col-sm-offset-2 col-sm-8">
+<div class="container col-sm-offset-2 col-sm-8">
+    <div class="jumbotron">
+       
                 
-                     <form class="form-horizontal border-class" method ="POST" action="/add">
+                    <form class="form-horizontal" method ="POST" action="/add">
                         <div class="row">
                             <div class="form-group">
                                 <label class="col-sm-3 col-sm-offset-1 control-label">Pika kufitare</label>
@@ -63,7 +40,10 @@
 
                         </div>
 
-                        <hr style="max-width: 50%; padding-left: 22px;">
+                       
+                        
+                        <hr class="style1">
+
 
                         <div class="row">   
                             <h4 class="col-sm-offset-1 col-sm-2">Hyrje</h4>
@@ -106,7 +86,8 @@
                                 <label class="control-label">minuta</label>
                         </div>
         
-                        <hr style="max-width: 50%; padding-left: 22px;">
+                        
+                        <hr class="style1">
 
 
                         <div class="row">
@@ -153,15 +134,15 @@
                                 <div class="col-sm-offset-4 col-sm-6">
                                     <button type="submit" class="btn btn-primary target" id="target1"><i class="fa fa-paper-plane">  D&euml;rgo</i></button>
    
-                                    <button type="button" class="btn btn-primary target" id="target2"><i class="fa fa-trash">  Fshij</i></button>
+                                    <button type="button" class="btn btn-danger target" id="target2"><i class="fa fa-trash">  Fshij</i></button>
                                 </div>
                             </div>
                         </div>
                     </form>
-              
-            </div>
-       </div>
+           
     </div>
+      
+</div>
 
 
 <!--include footer-->

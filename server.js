@@ -35,7 +35,7 @@ MongoClient.connect(mongoURL, function(err , database ){
 });
 
 
-//describe all datas 
+//Home tab 
 app.get('/', function(req,res){
    //res.sendFile(__dirname + '/index.html');
    var title="Forma e regjistrimit t\353 pikave kufitare";
@@ -43,7 +43,7 @@ app.get('/', function(req,res){
        
        
    });
- //list all data 
+ //List all data 
 app.get('/show',function(req, res){
 		var title="Lista me t\353 dh\353na";
 		qkmk.find({}).toArray(function(err,docs){
@@ -55,6 +55,7 @@ app.get('/show',function(req, res){
      });  
  });   
  
+ // Add data
 app.post('/add',function(req,res){ 
 	var data = req.body;
 	qkmk.insert(data , function(err, results){
@@ -66,7 +67,7 @@ app.post('/add',function(req,res){
      }); 
 
 	 
-//edit datas
+//edit data
 app.get('/edit/:id', function(req, res) {
 	var title = "Edito t\353 dh\353nat";
   var id = objectId(req.params.id);
@@ -121,40 +122,10 @@ app.get('/charts', function(req, res) {
   
 });
 
-//viz
- app.get('/viz', function(req, res) {
 
- 	qkmk.find({}).toArray(function(err,docs){
-      if(err){
-        console.log(err);
-      }
-      
-   res.render('viz' , {docs :docs});
-     });
- });
-   	 
- //Viz
      
    
-/*app.get('/exercise',function(req,res){
-	var dataJson ={
-		"id" : 1,
-		"project" : "techstitution",
-		"cars": {
-        "car1":"Ford",
-        "car2":"BMW",
-        "car3":"Fiat"
-    }
-		
-	};
-	var projects = [
-		{ id :1 , name : "anita" , lastname : "hajdari"},
-        { id :2 , name : "fatbardha" , lastname : "bruqi"},
-		{ id :3 , name : "monika" , lastname : "behluli"},
-	];
-	res.render('exercise' , {data : dataJson , projects : projects});
-	 
- });  */
+
 
 app.get('*' ,function(req, res){
   res.send("Not found ! ");

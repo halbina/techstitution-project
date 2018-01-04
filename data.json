@@ -1,5 +1,5 @@
 {
-        "_id" : "5a401e180353c504ac156eed",
+       // "_id" : "5a401e180353c504ac156eed",
         "pika_kufitare" : "vemice",
         "hyrje_min_minuta" : "4",
         "hyrje_max_minuta" : "5",
@@ -11,7 +11,7 @@
         "dalje_max_metra" : "7"
 }
 {
-        "_id" : "5a401eac0353c504ac156eee",
+       // "_id" : "5a401eac0353c504ac156eee",
         "pika_kufitare" : "hanielezit",
         "hyrje_min_minuta" : "5",
         "hyrje_max_minuta" : "8",
@@ -23,7 +23,7 @@
         "dalje_max_metra" : "9"
 }
 {
-        "_id" : "5a402f1835a79a1de4b76533",
+        //"_id" : "5a402f1835a79a1de4b76533",
         "pika_kufitare" : "dheubardhe",
         "hyrje_min_minuta" : "3",
         "hyrje_max_minuta" : "5",
@@ -35,7 +35,7 @@
         "dalje_max_metra" : "9"
 }
 {
-        "_id" : "5a4167465252f01c186bde2a",
+       // "_id" : "5a4167465252f01c186bde2a",
         "pika_kufitare" : "qafprushi",
         "hyrje_min_minuta" : "1",
         "hyrje_max_minuta" : "2",
@@ -47,7 +47,7 @@
         "dalje_max_metra" : "2"
 }
 {
-        "_id" : "5a416e37a3da302550e97a79",
+       // "_id" : "5a416e37a3da302550e97a79",
         "pika_kufitare" : "glloboqice",
         "hyrje_min_minuta" : "12",
         "hyrje_max_minuta" : "2",
