@@ -1,16 +1,14 @@
 
 
-$(document).ready(function() {
-    $("button").addClass("animated bounce");
-    $("#buttons").addClass("animated shake");
- });
 
-$(document).ready(function() {
-    //$(".target").mouseenter(function(){
-      //  $(this).resize();
-      $(".target").addClass("animated shake");
-    });
 
+
+function validAction(){}
+var result = confirm("Want to delete?");
+if (result) {
+    document.getElementById("button").
+}
+}
 
 
 $(document).ready(function() {
